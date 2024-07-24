@@ -1,0 +1,49 @@
+<div
+  class="mx-auto w-fit flex flex-col gap-2 bg-zinc-100 p-3 rounded-lg shadow-lg"
+>
+  <h1 class="text-2xl">Todo List</h1>
+  <div class="h-[50px]">
+    <input
+      type="text"
+      placeholder="Todo name"
+      [(ngModel)]="newTodoTitle"
+      class="outline-none h-full border-b-2 border-neutral-400 ring-blue-200 duration-300 py-2 px-3 rounded-sm"
+      (keyup.enter)="addTodo(newTodoTitle)"
+    />
+    <button
+      class="bg-zinc-200 px-7 font-bold py-1 rounded-sm h-full"
+      (click)="addTodo(newTodoTitle)"
+    >
+      Add
+    </button>
+  </div>
+
+  <table>
+    <tbody class="w-full">
+      <tr
+        *ngFor="let todo of todos; index as i"
+        class="w-full flex gap-2 items-center"
+      >
+        <td>{{ i + 1 }}</td>
+        <td
+          [ngClass]="{
+            'line-through text-green-500': todos[i].isCompleted,
+
+          }"
+          class="flex-1"
+          (click)="markComplete(i)"
+        >
+          {{ todo.title }}
+        </td>
+        <td>
+          <button
+            class="bg-red-500 text-white px-3 py-1 rounded-sm"
+            (click)="removeTodo(i)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
