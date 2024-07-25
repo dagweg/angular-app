@@ -1,0 +1,48 @@
+<form
+  class="flex flex-col shadow-lg w-fit bg-slate-200 p-4"
+  [formGroup]="applyForm"
+  onsubmit="handleFormSubmit()"
+>
+  <label
+    class="translate-x-3 translate-y-3 bg-white px-1 font-bold rounded-full w-fit"
+    aria-label="First name"
+    for="firstname"
+    >First name</label
+  >
+  <input
+    type="text"
+    name="Firstname"
+    id="firstname"
+    formControlName="firstName"
+    class="px-3 py-2 border-2 border-slate-300 rounded-full"
+  />
+
+  <label
+    class="translate-x-3 translate-y-3 bg-white px-1 font-bold rounded-full w-fit"
+    aria-label="Last name"
+    for="lastname"
+    >Last name</label
+  >
+  <input
+    type="text"
+    name="Lastname"
+    id="lastname"
+    formControlName="lastName"
+    class="px-3 py-2 border-2 border-slate-300 rounded-full"
+  />
+
+  <label
+    class="translate-x-3 translate-y-3 bg-white px-1 font-bold rounded-full w-fit"
+    aria-label="Email"
+    for="email"
+    >Email</label
+  >
+  <input
+    type="text"
+    name="Email"
+    id="email"
+    formControlName="email"
+    class="px-3 py-2 border-2 border-slate-300 rounded-full"
+  />
+  <input type="submit" name="" id="" />
+</form>

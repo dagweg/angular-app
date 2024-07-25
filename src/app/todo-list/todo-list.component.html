@@ -36,6 +36,14 @@
           {{ todo.title }}
         </td>
         <td>
+          <input
+            class="p-2"
+            type="checkbox"
+            [checked]="todos[i].isCompleted"
+            (change)="markComplete(i)"
+          />
+        </td>
+        <td>
           <button
             class="bg-red-500 text-white px-3 py-1 rounded-sm"
             (click)="removeTodo(i)"
