@@ -1,1 +1,13 @@
-<div>Welcome to my contact page</div>
+<div class="flex items-center justify-center h-full">
+  <div class="w-[500px] aspect-square bg-neutral-100 rounded-lg shadow-sm">
+    <h1>Contact</h1>
+    <form class="grid grid-cols-2 gap-3">
+      <app-heading />
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" />
+      <label for="message">Message</label>
+      <input type="text" name="message" id="message" />
+      <input type="submit" value="Send" />
+    </form>
+  </div>
+</div>

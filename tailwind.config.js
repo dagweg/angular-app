@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      zain: ["'Zain'", "Times new roman"],
+      zain: ["'Zain'", "SF Display", "Segoe UI"],
     },
   },
   plugins: [],

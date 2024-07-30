@@ -1,12 +1,36 @@
 <header
-  class="w-full sticky top-0 text-center p-4 bg-neutral-50 font-zain flex flex-col justify-center items-center"
+  class="w-full sticky top-0 text-center p-4 bg-neutral-50 font-zain flex justify-between items-center"
 >
-  <span
-    class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent text-3xl w-fit"
-    >Angular 18</span
-  >
-  <span
-    class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent text-xl w-fit"
-    >Jemstack + Scully</span
-  >
+  <div class="flex items-center gap-3">
+    <span
+      class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent text-3xl w-fit"
+      >Angular 18</span
+    >
+    <span
+      class="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent text-xl w-fit"
+      >Jemstack + Scully</span
+    >
+  </div>
+  <nav class="flex justify-center items-center space-x-4 mt-4">
+    <a
+      routerLink="/dashboard"
+      routerLinkActive="text-indigo-800"
+      class="hover:text-indigo-500 cursor-pointer"
+      >Dashboard</a
+    >
+    <a
+      routerLink="/blogs"
+      routerLinkActive="text-indigo-800"
+      class="hover:text-indigo-500 cursor-pointer"
+      >Blogs</a
+    >
+    <a
+      routerLink="/contact"
+      routerLinkActive="text-indigo-800"
+      class="hover:text-indigo-500 cursor-pointer"
+      >Contact</a
+    >
+  </nav>
 </header>
+
+<router-outlet />
