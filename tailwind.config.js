@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       zain: ["'Zain'", "SF Display", "Segoe UI"],
+      cabinetGrotesk: ["'Cabinet Grotesk'", "SF Display", "Segoe UI"],
     },
   },
   plugins: [],
